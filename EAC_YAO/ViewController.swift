@@ -12,7 +12,17 @@ import CSVImporter//Csv Parser
 import CoreData
 let instanceOfJiebaController: JiebaController = JiebaController()
 let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //CoreData
-
+extension Array
+{
+    /** Randomizes the order of an array's elements. */
+    mutating func shuffle()
+    {
+        for _ in 0..<10
+        {
+            sort { (_,_) in arc4random() < arc4random() }
+        }
+    }
+}
 class Emotion_Dict {//情感字典
     var Pos_Dict: [String]?
     var Neg_Dict: [String]?
@@ -118,6 +128,7 @@ class ViewController: UIViewController , UITextViewDelegate{
     func SVMProcess(importedRecord : [CSV_Lyric],coredataready : Bool){
         //var dataArray : [CSV_Lyric] = [CSV_Lyric]()//CSV讀入的資料
         let data = DataSet(dataType: .Classification, inputDimension: 8, outputDimension: 1)
+        let testData = DataSet(dataType: .Classification, inputDimension: 8, outputDimension: 1)
         var flag = coredataready
         if !flag { //Core Data尚無Emotion Feature
         for (index,element) in importedRecord.enumerated(){
@@ -157,13 +168,15 @@ class ViewController: UIViewController , UITextViewDelegate{
         }
         else if flag {//core data已有Emotion Feature
             // select
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)//core data
             // 依 id 由小到大排序
             request.sortDescriptors = [NSSortDescriptor(key: "song_id", ascending: true)]
             do {
-                let song_feature =
+                var song_feature =
                     try moc.fetch(request) as! [Song_Feature]
-                for result in song_feature {
+                song_feature.shuffle()//把資料隨機打散
+                for (index, result) in song_feature.enumerated() {
+                    if ((index+1)%10 != 0){//加入Train data
                     let inputfeature :[Double] = [Double(result.pos_amount),Double(result.neg_amount),Double(result.pos_score),Double(result.neg_score),Double(result.pos_avg_amount),Double(result.neg_avg_amount),Double(result.pos_avg_score),Double(result.neg_avg_score)]
                     do{
                         try data.addDataPoint(input: inputfeature, output: Int(result.song_answer))
@@ -172,6 +185,31 @@ class ViewController: UIViewController , UITextViewDelegate{
                     catch{
                         print("SVM Error")
                     }
+                    }
+                    else { //SVM後 加入TestData
+                        //svm traning
+                        let svm = SVMModel(problemType: .C_SVM_Classification, kernelSettings:
+                            KernelParameters(type: .RadialBasisFunction, degree: 0, gamma: 0.5, coef0: 0.0))
+                        svm.train(data: data)
+                        // Create test dataset
+                        let inputfeature :[Double] = [Double(result.pos_amount),Double(result.neg_amount),Double(result.pos_score),Double(result.neg_score),Double(result.pos_avg_amount),Double(result.neg_avg_amount),Double(result.pos_avg_score),Double(result.neg_avg_score)]
+                        do {
+                            try testData.addTestDataPoint(input: inputfeature)    //  Expect 1
+                            }
+                        catch {
+                            print("Invalid data set created")
+                        }
+                        //  Predict on the test data
+                        svm.predictValues(data: testData)
+                        var classLabel : Int
+                        do {
+                            try classLabel = testData.getClass(index: 0)
+                            print(classLabel == Int(result.song_answer), "first test data point, expect 1")
+                        }
+                        catch {
+                            print("Error in prediction")
+                        }
+                    }
                 }
             } catch {
                 fatalError("\(error)")
@@ -179,6 +217,7 @@ class ViewController: UIViewController , UITextViewDelegate{
             print("SVMSuccess")
         }
     }
+    
     func segFunc (stringtoseg : String, songID : Int) -> Emotion_Feature {
     var lyricString = (instanceOfJiebaController.ready(toSeg: stringtoseg).components(separatedBy: ["\"",","," "]))
     lyricString = lyricString.filter { $0 != "" }
