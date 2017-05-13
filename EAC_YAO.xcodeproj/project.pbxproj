@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B252C7081EC42A19000F9485 /* Insufficiently.txt in Resources */ = {isa = PBXBuildFile; fileRef = B252C7001EC42A19000F9485 /* Insufficiently.txt */; };
+		B252C7091EC42A19000F9485 /* Ish.txt in Resources */ = {isa = PBXBuildFile; fileRef = B252C7011EC42A19000F9485 /* Ish.txt */; };
+		B252C70A1EC42A19000F9485 /* More.txt in Resources */ = {isa = PBXBuildFile; fileRef = B252C7021EC42A19000F9485 /* More.txt */; };
+		B252C70B1EC42A19000F9485 /* Most.txt in Resources */ = {isa = PBXBuildFile; fileRef = B252C7031EC42A19000F9485 /* Most.txt */; };
+		B252C70C1EC42A19000F9485 /* Negative.txt in Resources */ = {isa = PBXBuildFile; fileRef = B252C7041EC42A19000F9485 /* Negative.txt */; };
+		B252C70D1EC42A19000F9485 /* Over.txt in Resources */ = {isa = PBXBuildFile; fileRef = B252C7051EC42A19000F9485 /* Over.txt */; };
+		B252C70E1EC42A19000F9485 /* Positive.txt in Resources */ = {isa = PBXBuildFile; fileRef = B252C7061EC42A19000F9485 /* Positive.txt */; };
+		B252C70F1EC42A19000F9485 /* Very.txt in Resources */ = {isa = PBXBuildFile; fileRef = B252C7071EC42A19000F9485 /* Very.txt */; };
+		B2A7A7E81EC44FB100A241F1 /* Invert.txt in Resources */ = {isa = PBXBuildFile; fileRef = B2A7A7E71EC44FB100A241F1 /* Invert.txt */; };
+		B2ACBA1E1EC5AE87009C33D9 /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACBA191EC5AE87009C33D9 /* DataSet.swift */; };
+		B2ACBA1F1EC5AE87009C33D9 /* Kernel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACBA1A1EC5AE87009C33D9 /* Kernel.swift */; };
+		B2ACBA211EC5AE87009C33D9 /* SVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACBA1C1EC5AE87009C33D9 /* SVM.swift */; };
 		B2BB0D191EBF510D0059F185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB0D181EBF510D0059F185 /* AppDelegate.swift */; };
 		B2BB0D1B1EBF510D0059F185 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB0D1A1EBF510D0059F185 /* ViewController.swift */; };
 		B2BB0D1E1EBF510D0059F185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BB0D1C1EBF510D0059F185 /* Main.storyboard */; };
@@ -15,6 +27,11 @@
 		B2BB0D261EBF510D0059F185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BB0D241EBF510D0059F185 /* LaunchScreen.storyboard */; };
 		B2BB0D311EBF510D0059F185 /* EAC_YAOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB0D301EBF510D0059F185 /* EAC_YAOTests.swift */; };
 		B2BB0D3C1EBF510D0059F185 /* EAC_YAOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB0D3B1EBF510D0059F185 /* EAC_YAOUITests.swift */; };
+		B2D579D41EC17A9C00EFF80E /* JiebaController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2D579D31EC17A9C00EFF80E /* JiebaController.mm */; };
+		B2D579D61EC17B2E00EFF80E /* iosjieba.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B2D579D51EC17B2E00EFF80E /* iosjieba.bundle */; };
+		B2D579DB1EC1805000EFF80E /* Segmentor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2D579D91EC1805000EFF80E /* Segmentor.cpp */; };
+		B2D6A6621EC5EAC200BD2FD2 /* Lyric_SVM_data.csv in Resources */ = {isa = PBXBuildFile; fileRef = B2D6A6611EC5EAC200BD2FD2 /* Lyric_SVM_data.csv */; };
+		D2C7964F7A99AD3E4A9C3721 /* Pods_EAC_YAO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E7B7E577D23BE0098F6548E /* Pods_EAC_YAO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +52,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BFDD022130E9C666CD204B5 /* Pods-EAC_YAO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAC_YAO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EAC_YAO/Pods-EAC_YAO.debug.xcconfig"; sourceTree = "<group>"; };
+		5E7B7E577D23BE0098F6548E /* Pods_EAC_YAO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EAC_YAO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D0E26B84705A32AEBB3D56 /* Pods-EAC_YAO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EAC_YAO.release.xcconfig"; path = "Pods/Target Support Files/Pods-EAC_YAO/Pods-EAC_YAO.release.xcconfig"; sourceTree = "<group>"; };
+		B252C7001EC42A19000F9485 /* Insufficiently.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Insufficiently.txt; sourceTree = "<group>"; };
+		B252C7011EC42A19000F9485 /* Ish.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ish.txt; sourceTree = "<group>"; };
+		B252C7021EC42A19000F9485 /* More.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = More.txt; sourceTree = "<group>"; };
+		B252C7031EC42A19000F9485 /* Most.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Most.txt; sourceTree = "<group>"; };
+		B252C7041EC42A19000F9485 /* Negative.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Negative.txt; sourceTree = "<group>"; };
+		B252C7051EC42A19000F9485 /* Over.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Over.txt; sourceTree = "<group>"; };
+		B252C7061EC42A19000F9485 /* Positive.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Positive.txt; sourceTree = "<group>"; };
+		B252C7071EC42A19000F9485 /* Very.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Very.txt; sourceTree = "<group>"; };
+		B2A7A7E71EC44FB100A241F1 /* Invert.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Invert.txt; sourceTree = "<group>"; };
+		B2ACBA191EC5AE87009C33D9 /* DataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
+		B2ACBA1A1EC5AE87009C33D9 /* Kernel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kernel.swift; sourceTree = "<group>"; };
+		B2ACBA1C1EC5AE87009C33D9 /* SVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVM.swift; sourceTree = "<group>"; };
 		B2BB0D151EBF510D0059F185 /* EAC_YAO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAC_YAO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BB0D181EBF510D0059F185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2BB0D1A1EBF510D0059F185 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +81,43 @@
 		B2BB0D371EBF510D0059F185 /* EAC_YAOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EAC_YAOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BB0D3B1EBF510D0059F185 /* EAC_YAOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAC_YAOUITests.swift; sourceTree = "<group>"; };
 		B2BB0D3D1EBF510D0059F185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2D579811EC0BE3C00EFF80E /* EAC_YAO-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EAC_YAO-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2D579D31EC17A9C00EFF80E /* JiebaController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JiebaController.mm; sourceTree = "<group>"; };
+		B2D579D51EC17B2E00EFF80E /* iosjieba.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iosjieba.bundle; sourceTree = "<group>"; };
+		B2D579D81EC17D9900EFF80E /* JiebaController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiebaController.h; sourceTree = "<group>"; };
+		B2D579D91EC1805000EFF80E /* Segmentor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Segmentor.cpp; sourceTree = "<group>"; };
+		B2D579DA1EC1805000EFF80E /* Segmentor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Segmentor.h; sourceTree = "<group>"; };
+		B2D579DD1EC1809300EFF80E /* DictTrie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DictTrie.hpp; sourceTree = "<group>"; };
+		B2D579DE1EC1809300EFF80E /* FullSegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FullSegment.hpp; sourceTree = "<group>"; };
+		B2D579DF1EC1809300EFF80E /* HMMSegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HMMSegment.hpp; sourceTree = "<group>"; };
+		B2D579E01EC1809300EFF80E /* ISegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ISegment.hpp; sourceTree = "<group>"; };
+		B2D579E11EC1809300EFF80E /* KeywordExtractor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KeywordExtractor.hpp; sourceTree = "<group>"; };
+		B2D579E31EC1809300EFF80E /* ArgvContext.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArgvContext.hpp; sourceTree = "<group>"; };
+		B2D579E41EC1809300EFF80E /* BlockingQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BlockingQueue.hpp; sourceTree = "<group>"; };
+		B2D579E51EC1809300EFF80E /* BoundedQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BoundedQueue.hpp; sourceTree = "<group>"; };
+		B2D579E61EC1809300EFF80E /* CastFloat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CastFloat.hpp; sourceTree = "<group>"; };
+		B2D579E71EC1809300EFF80E /* Condition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Condition.hpp; sourceTree = "<group>"; };
+		B2D579E81EC1809300EFF80E /* Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
+		B2D579E91EC1809300EFF80E /* HandyMacro.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HandyMacro.hpp; sourceTree = "<group>"; };
+		B2D579EA1EC1809300EFF80E /* InitOnOff.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InitOnOff.hpp; sourceTree = "<group>"; };
+		B2D579EB1EC1809300EFF80E /* LocalVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LocalVector.hpp; sourceTree = "<group>"; };
+		B2D579EC1EC1809300EFF80E /* Logger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
+		B2D579ED1EC1809300EFF80E /* Md5.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Md5.hpp; sourceTree = "<group>"; };
+		B2D579EE1EC1809300EFF80E /* MutexLock.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MutexLock.hpp; sourceTree = "<group>"; };
+		B2D579EF1EC1809300EFF80E /* MysqlClient.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MysqlClient.hpp; sourceTree = "<group>"; };
+		B2D579F01EC1809300EFF80E /* NonCopyable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NonCopyable.hpp; sourceTree = "<group>"; };
+		B2D579F11EC1809300EFF80E /* StdExtension.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StdExtension.hpp; sourceTree = "<group>"; };
+		B2D579F21EC1809300EFF80E /* StringUtil.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StringUtil.hpp; sourceTree = "<group>"; };
+		B2D579F31EC1809300EFF80E /* Thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Thread.hpp; sourceTree = "<group>"; };
+		B2D579F41EC1809300EFF80E /* ThreadPool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ThreadPool.hpp; sourceTree = "<group>"; };
+		B2D579F51EC1809300EFF80E /* MixSegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MixSegment.hpp; sourceTree = "<group>"; };
+		B2D579F61EC1809300EFF80E /* MPSegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MPSegment.hpp; sourceTree = "<group>"; };
+		B2D579F71EC1809300EFF80E /* PosTagger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PosTagger.hpp; sourceTree = "<group>"; };
+		B2D579F81EC1809300EFF80E /* QuerySegment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuerySegment.hpp; sourceTree = "<group>"; };
+		B2D579F91EC1809300EFF80E /* SegmentBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SegmentBase.hpp; sourceTree = "<group>"; };
+		B2D579FA1EC1809300EFF80E /* TransCode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TransCode.hpp; sourceTree = "<group>"; };
+		B2D579FB1EC1809300EFF80E /* Trie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trie.hpp; sourceTree = "<group>"; };
+		B2D6A6611EC5EAC200BD2FD2 /* Lyric_SVM_data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lyric_SVM_data.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C7964F7A99AD3E4A9C3721 /* Pods_EAC_YAO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +146,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E99E5237B0D0C6E0E11DCA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BFDD022130E9C666CD204B5 /* Pods-EAC_YAO.debug.xcconfig */,
+				B1D0E26B84705A32AEBB3D56 /* Pods-EAC_YAO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A2FEC5EEF2BEB9AE0D1E3444 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E7B7E577D23BE0098F6548E /* Pods_EAC_YAO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B252C6FF1EC42A19000F9485 /* Emotion_dict */ = {
+			isa = PBXGroup;
+			children = (
+				B252C7001EC42A19000F9485 /* Insufficiently.txt */,
+				B2A7A7E71EC44FB100A241F1 /* Invert.txt */,
+				B252C7011EC42A19000F9485 /* Ish.txt */,
+				B252C7021EC42A19000F9485 /* More.txt */,
+				B252C7031EC42A19000F9485 /* Most.txt */,
+				B252C7041EC42A19000F9485 /* Negative.txt */,
+				B252C7051EC42A19000F9485 /* Over.txt */,
+				B252C7061EC42A19000F9485 /* Positive.txt */,
+				B252C7071EC42A19000F9485 /* Very.txt */,
+			);
+			name = Emotion_dict;
+			path = CppJieba/Emotion_dict;
+			sourceTree = "<group>";
+		};
+		B2ACBA181EC5AE87009C33D9 /* swift-libsvm-master */ = {
+			isa = PBXGroup;
+			children = (
+				B2ACBA191EC5AE87009C33D9 /* DataSet.swift */,
+				B2ACBA1A1EC5AE87009C33D9 /* Kernel.swift */,
+				B2ACBA1C1EC5AE87009C33D9 /* SVM.swift */,
+			);
+			name = "swift-libsvm-master";
+			path = "CppJieba/swift-libsvm-master";
+			sourceTree = "<group>";
+		};
 		B2BB0D0C1EBF510D0059F185 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +198,8 @@
 				B2BB0D2F1EBF510D0059F185 /* EAC_YAOTests */,
 				B2BB0D3A1EBF510D0059F185 /* EAC_YAOUITests */,
 				B2BB0D161EBF510D0059F185 /* Products */,
+				9E99E5237B0D0C6E0E11DCA3 /* Pods */,
+				A2FEC5EEF2BEB9AE0D1E3444 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +218,21 @@
 			children = (
 				B2BB0D181EBF510D0059F185 /* AppDelegate.swift */,
 				B2BB0D1A1EBF510D0059F185 /* ViewController.swift */,
+				B2D579D81EC17D9900EFF80E /* JiebaController.h */,
+				B2D579D31EC17A9C00EFF80E /* JiebaController.mm */,
 				B2BB0D1C1EBF510D0059F185 /* Main.storyboard */,
 				B2BB0D221EBF510D0059F185 /* Assets.xcassets */,
 				B2BB0D241EBF510D0059F185 /* LaunchScreen.storyboard */,
+				B2D579D51EC17B2E00EFF80E /* iosjieba.bundle */,
 				B2BB0D271EBF510D0059F185 /* Info.plist */,
 				B2BB0D1F1EBF510D0059F185 /* EAC_YAO.xcdatamodeld */,
+				B2D579811EC0BE3C00EFF80E /* EAC_YAO-Bridging-Header.h */,
+				B2D579D91EC1805000EFF80E /* Segmentor.cpp */,
+				B2D579DA1EC1805000EFF80E /* Segmentor.h */,
+				B2D6A6611EC5EAC200BD2FD2 /* Lyric_SVM_data.csv */,
+				B2ACBA181EC5AE87009C33D9 /* swift-libsvm-master */,
+				B252C6FF1EC42A19000F9485 /* Emotion_dict */,
+				B2D579DC1EC1809300EFF80E /* CppJieba */,
 			);
 			path = EAC_YAO;
 			sourceTree = "<group>";
@@ -128,6 +255,51 @@
 			path = EAC_YAOUITests;
 			sourceTree = "<group>";
 		};
+		B2D579DC1EC1809300EFF80E /* CppJieba */ = {
+			isa = PBXGroup;
+			children = (
+				B2D579DD1EC1809300EFF80E /* DictTrie.hpp */,
+				B2D579DE1EC1809300EFF80E /* FullSegment.hpp */,
+				B2D579DF1EC1809300EFF80E /* HMMSegment.hpp */,
+				B2D579E01EC1809300EFF80E /* ISegment.hpp */,
+				B2D579E11EC1809300EFF80E /* KeywordExtractor.hpp */,
+				B2D579E21EC1809300EFF80E /* Limonp */,
+				B2D579F51EC1809300EFF80E /* MixSegment.hpp */,
+				B2D579F61EC1809300EFF80E /* MPSegment.hpp */,
+				B2D579F71EC1809300EFF80E /* PosTagger.hpp */,
+				B2D579F81EC1809300EFF80E /* QuerySegment.hpp */,
+				B2D579F91EC1809300EFF80E /* SegmentBase.hpp */,
+				B2D579FA1EC1809300EFF80E /* TransCode.hpp */,
+				B2D579FB1EC1809300EFF80E /* Trie.hpp */,
+			);
+			path = CppJieba;
+			sourceTree = "<group>";
+		};
+		B2D579E21EC1809300EFF80E /* Limonp */ = {
+			isa = PBXGroup;
+			children = (
+				B2D579E31EC1809300EFF80E /* ArgvContext.hpp */,
+				B2D579E41EC1809300EFF80E /* BlockingQueue.hpp */,
+				B2D579E51EC1809300EFF80E /* BoundedQueue.hpp */,
+				B2D579E61EC1809300EFF80E /* CastFloat.hpp */,
+				B2D579E71EC1809300EFF80E /* Condition.hpp */,
+				B2D579E81EC1809300EFF80E /* Config.hpp */,
+				B2D579E91EC1809300EFF80E /* HandyMacro.hpp */,
+				B2D579EA1EC1809300EFF80E /* InitOnOff.hpp */,
+				B2D579EB1EC1809300EFF80E /* LocalVector.hpp */,
+				B2D579EC1EC1809300EFF80E /* Logger.hpp */,
+				B2D579ED1EC1809300EFF80E /* Md5.hpp */,
+				B2D579EE1EC1809300EFF80E /* MutexLock.hpp */,
+				B2D579EF1EC1809300EFF80E /* MysqlClient.hpp */,
+				B2D579F01EC1809300EFF80E /* NonCopyable.hpp */,
+				B2D579F11EC1809300EFF80E /* StdExtension.hpp */,
+				B2D579F21EC1809300EFF80E /* StringUtil.hpp */,
+				B2D579F31EC1809300EFF80E /* Thread.hpp */,
+				B2D579F41EC1809300EFF80E /* ThreadPool.hpp */,
+			);
+			path = Limonp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2BB0D401EBF510D0059F185 /* Build configuration list for PBXNativeTarget "EAC_YAO" */;
 			buildPhases = (
+				59693D72E9FBF33506143886 /* [CP] Check Pods Manifest.lock */,
 				B2BB0D111EBF510D0059F185 /* Sources */,
 				B2BB0D121EBF510D0059F185 /* Frameworks */,
 				B2BB0D131EBF510D0059F185 /* Resources */,
+				E9FD9875157D0A3A88CA142B /* [CP] Embed Pods Frameworks */,
+				1BBF0C3FF50D204502D3C9EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,11 +366,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Johnny_Yao;
 				TargetAttributes = {
 					B2BB0D141EBF510D0059F185 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B2BB0D2B1EBF510D0059F185 = {
@@ -235,9 +411,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B252C70D1EC42A19000F9485 /* Over.txt in Resources */,
 				B2BB0D261EBF510D0059F185 /* LaunchScreen.storyboard in Resources */,
+				B252C70E1EC42A19000F9485 /* Positive.txt in Resources */,
+				B252C70C1EC42A19000F9485 /* Negative.txt in Resources */,
+				B252C70B1EC42A19000F9485 /* Most.txt in Resources */,
+				B252C7081EC42A19000F9485 /* Insufficiently.txt in Resources */,
+				B2D579D61EC17B2E00EFF80E /* iosjieba.bundle in Resources */,
+				B252C7091EC42A19000F9485 /* Ish.txt in Resources */,
+				B252C70F1EC42A19000F9485 /* Very.txt in Resources */,
+				B2A7A7E81EC44FB100A241F1 /* Invert.txt in Resources */,
 				B2BB0D231EBF510D0059F185 /* Assets.xcassets in Resources */,
+				B252C70A1EC42A19000F9485 /* More.txt in Resources */,
 				B2BB0D1E1EBF510D0059F185 /* Main.storyboard in Resources */,
+				B2D6A6621EC5EAC200BD2FD2 /* Lyric_SVM_data.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +444,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BBF0C3FF50D204502D3C9EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAC_YAO/Pods-EAC_YAO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59693D72E9FBF33506143886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9FD9875157D0A3A88CA142B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EAC_YAO/Pods-EAC_YAO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B2BB0D111EBF510D0059F185 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2ACBA1E1EC5AE87009C33D9 /* DataSet.swift in Sources */,
 				B2BB0D1B1EBF510D0059F185 /* ViewController.swift in Sources */,
 				B2BB0D191EBF510D0059F185 /* AppDelegate.swift in Sources */,
+				B2D579DB1EC1805000EFF80E /* Segmentor.cpp in Sources */,
 				B2BB0D211EBF510D0059F185 /* EAC_YAO.xcdatamodeld in Sources */,
+				B2D579D41EC17A9C00EFF80E /* JiebaController.mm in Sources */,
+				B2ACBA211EC5AE87009C33D9 /* SVM.swift in Sources */,
+				B2ACBA1F1EC5AE87009C33D9 /* Kernel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +577,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -359,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -386,6 +627,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -402,7 +644,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -412,24 +654,31 @@
 		};
 		B2BB0D411EBF510D0059F185 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BFDD022130E9C666CD204B5 /* Pods-EAC_YAO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EAC_YAO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Johnny-Yao.EAC-YAO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EAC_YAO/EAC_YAO-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		B2BB0D421EBF510D0059F185 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D0E26B84705A32AEBB3D56 /* Pods-EAC_YAO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EAC_YAO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Johnny-Yao.EAC-YAO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EAC_YAO/EAC_YAO-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -507,6 +756,7 @@
 				B2BB0D421EBF510D0059F185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2BB0D431EBF510D0059F185 /* Build configuration list for PBXNativeTarget "EAC_YAOTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +765,7 @@
 				B2BB0D451EBF510D0059F185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2BB0D461EBF510D0059F185 /* Build configuration list for PBXNativeTarget "EAC_YAOUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +774,7 @@
 				B2BB0D481EBF510D0059F185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
