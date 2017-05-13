@@ -153,7 +153,7 @@ class ViewController: UIViewController , UITextViewDelegate{
             }*/
         }
         //print("SVMSuccess")
-            flag = true
+            flag = true 
         }
         else if flag {//core data已有Emotion Feature
             // select
