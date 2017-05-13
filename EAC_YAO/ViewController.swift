@@ -62,17 +62,35 @@ class CSV_Lyric {
         self.Singer=Singer
     }
 }
-
+class SVM_result {
+    var Song_ID : Int = 0
+    var Song_Result :Bool = true
+}
 let emotion_dict: Emotion_Dict = Emotion_Dict()
 var emotion_feature_User :Emotion_Feature = Emotion_Feature()
 let myEntityName = "Song_Feature"
+var svm_result_true : [SVM_result] = [SVM_result]()
+var svm_result_false : [SVM_result] = [SVM_result]()
+
 class ViewController: UIViewController , UITextViewDelegate{
     @IBAction func svmStart(_ sender: Any) {
         SVMStart()
     }
     @IBAction func segStart(_ sender: UIButton) {
         emotion_feature_User = segFunc(stringtoseg: choursTextView.text,songID: 0)
-         }
+    }
+    @IBAction func ClearSVM(_ sender: Any) {
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try moc.execute(deleteRequest)
+            try moc.save()
+            print("Clean SVM")
+        } catch {
+            print ("There was an error")
+        }
+    }
     @IBOutlet weak var verseTextView: UITextView!
     @IBOutlet weak var prechorusTextView: UITextView!
     @IBOutlet weak var choursTextView: UITextView!
@@ -132,8 +150,8 @@ class ViewController: UIViewController , UITextViewDelegate{
         var flag = coredataready
         if !flag { //Core Data尚無Emotion Feature
         for (index,element) in importedRecord.enumerated(){
-            let emotionfeature = segFunc(stringtoseg: element.Lyric,songID: index+1)
-            //core data write
+            let emotionfeature = segFunc(stringtoseg: element.Lyric,songID: index+1)//計算情緒
+                   //core data write
             let song_feature = NSEntityDescription.insertNewObject(
                 forEntityName: myEntityName, into: moc)
                     as! Song_Feature
@@ -146,27 +164,18 @@ class ViewController: UIViewController , UITextViewDelegate{
             song_feature.pos_amount = Int16(emotionfeature.Pos_Amount)
             song_feature.pos_avg_score = emotionfeature.Pos_Avg_Score
             song_feature.pos_avg_amount = emotionfeature.Pos_Avg_Amount
+            var answer = element.Answer.characters.map{String($0)}
+            song_feature.song_answer = Int16(String(answer[0]))!
             do {
                 try moc.save()
             } catch {
                 fatalError("\(error)")
             }
-            //core data write finish
-            /*let inputfeature :[Double] = [Double(emotionfeature.Pos_Amount),Double(emotionfeature.Neg_Amount),Double(emotionfeature.Pos_Score),Double(emotionfeature.Neg_Score),Double(emotionfeature.Pos_Avg_Amount),Double(emotionfeature.Neg_Avg_Amount),Double(emotionfeature.Pos_Avg_Score),Double(emotionfeature.Neg_Avg_Score)]
-            do{
-                var answer = element.Answer.characters.map{String($0)}
-                song_feature.song_answer = Int16(String(answer[0]))!
-                try data.addDataPoint(input: inputfeature, output: Int(String(answer[0]))!)
-                print(element.Answer)
-            }
-            catch{
-                print("SVM Error")
-            }*/
         }
         //print("SVMSuccess")
             flag = true
         }
-        else if flag {//core data已有Emotion Feature
+        if flag {//core data已有Emotion Feature
             // select
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)//core data
             // 依 id 由小到大排序
@@ -174,8 +183,10 @@ class ViewController: UIViewController , UITextViewDelegate{
             do {
                 var song_feature =
                     try moc.fetch(request) as! [Song_Feature]
-                song_feature.shuffle()//把資料隨機打散
-                for (index, result) in song_feature.enumerated() {
+
+                for _ in 0 ..< 10 {
+                                    song_feature.shuffle()//把資料隨機打散
+                for (index, result) in song_feature.enumerated() { //驗證十次
                     if ((index+1)%10 != 0){//加入Train data
                     let inputfeature :[Double] = [Double(result.pos_amount),Double(result.neg_amount),Double(result.pos_score),Double(result.neg_score),Double(result.pos_avg_amount),Double(result.neg_avg_amount),Double(result.pos_avg_score),Double(result.neg_avg_score)]
                     do{
@@ -204,18 +215,37 @@ class ViewController: UIViewController , UITextViewDelegate{
                         var classLabel : Int
                         do {
                             try classLabel = testData.getClass(index: 0)
-                            print(classLabel == Int(result.song_answer), "first test data point, expect 1")
+                            print(classLabel == Int(result.song_answer), result.song_id,"test data point, expect", result.song_answer)
+                            let svmresult : SVM_result = SVM_result()
+                            if classLabel == Int(result.song_answer){
+                                svmresult.Song_ID = Int(result.song_id)
+                                svmresult.Song_Result = true
+                                svm_result_true.append(svmresult)
+                            }
+                            else {
+                                svmresult.Song_ID = Int(result.song_id)
+                                svmresult.Song_Result = false
+                                svm_result_false.append(svmresult)
+                            }
                         }
                         catch {
                             print("Error in prediction")
                         }
+                        data.inputs.removeAll()
+                        data.classes?.removeAll()
+                        testData.inputs.removeAll()
+                        testData.classes?.removeAll()
                     }
                 }
-            } catch {
+                }
+            }
+            catch {
                 fatalError("\(error)")
             }
             print("SVMSuccess")
         }
+        print("SVM Result:",svm_result_true.count)
+        print("SVM Result:False",svm_result_false)
     }
     
     func segFunc (stringtoseg : String, songID : Int) -> Emotion_Feature {
@@ -359,10 +389,10 @@ class ViewController: UIViewController , UITextViewDelegate{
                 emotion_feature.Neg_Score += element.Score!
             }
         }
-        emotion_feature.Pos_Avg_Amount = (Float(emotion_feature.Pos_Amount / (emotion_feature.Pos_Amount + emotion_feature.Neg_Amount)))
-        emotion_feature.Neg_Avg_Amount = (Float(emotion_feature.Neg_Amount / (emotion_feature.Pos_Amount + emotion_feature.Neg_Amount)))
-        emotion_feature.Pos_Avg_Score = (Float(emotion_feature.Pos_Score / Float(emotion_feature.Pos_Amount)))
-        emotion_feature.Neg_Avg_Score = (Float(emotion_feature.Neg_Score / Float(emotion_feature.Neg_Amount)))
+        emotion_feature.Pos_Avg_Amount = Float(Float(emotion_feature.Pos_Amount) / Float(emotion_feature.Pos_Amount + emotion_feature.Neg_Amount))
+        emotion_feature.Neg_Avg_Amount = Float(Float(emotion_feature.Neg_Amount) / Float(emotion_feature.Pos_Amount + emotion_feature.Neg_Amount))
+        emotion_feature.Pos_Avg_Score = Float(Float(emotion_feature.Pos_Score) / Float(emotion_feature.Pos_Amount))
+        emotion_feature.Neg_Avg_Score = Float(Float(emotion_feature.Neg_Score) / Float(emotion_feature.Neg_Amount))
         emotion_feature.Song_ID = songID
         return emotion_feature
     }

@@ -129,6 +129,14 @@
                                             <action selector="svmStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7yB-IN-GrX"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORQ-AC-t6G">
+                                        <rect key="frame" x="90" y="8" width="39" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Clean"/>
+                                        <connections>
+                                            <action selector="ClearSVM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35M-Fn-q11"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">

@@ -318,10 +318,11 @@ public class SVMModel
                             }
                         }
                         q = coeffStart[j]
-                        for index in 0..<classificationData.classCount[j] {
+                        for index in 0..<(classificationData.classCount[j]) {
                             if (nonZero[classificationData.classOffsets[j][index]]) {
-                                q+=1
+                                
                                 coefficients[i][q] = functions[permutation].α[index + classificationData.classCount[i]]
+                                q+=1
                             }
                         }
                         permutation += 1
